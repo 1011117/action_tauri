@@ -33,7 +33,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt install libwebkit2gtk-4.0-dev build-essential curl wget file libssl-dev libayatana-appindicator3-dev librsvg2-dev libglib2.0-dev
-          export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig/:$PKG_CONFIG_PATH  
+          PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1 pkg-config --libs --cflags glib-2.0 glib-2.0 >= 2.70 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
