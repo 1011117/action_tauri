@@ -39,9 +39,6 @@ jobs:
           version: 8.12.1
       - name: pnpm install
         run: pnpm install
-      - name: sss
-        run: rustup target add x86_64-pc-windows-msvc
-
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
